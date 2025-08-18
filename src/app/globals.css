@@ -30,7 +30,7 @@ body {
   margin-right: 15px;
   padding: 5px;
   border-radius: 10px;
-  background-color: #ff6f0169;
+  background-color: #0167ff69;
 }
 .shadow1{
   box-shadow: 0 0 30px rgb(0, 0, 0);
@@ -39,23 +39,26 @@ body {
   box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 .shadow2:hover{
-  box-shadow: inset 0 0 10px rgb(255, 111, 0) , 0 0 20px rgb(0, 0, 0);
+  box-shadow: inset 0 0 10px rgb(75, 60, 244) , 0 0 20px rgb(0, 0, 0);
+}
+.text{
+  font-size: 10px;
 }
 .move{
-    animation: rotating 5s linear 0s infinite running alternate;
+    animation: rotating 7s linear infinite running ;
     animation: name duration timing-function delay iteration-count direction fill-mode;
     position:absolute;
     top: 70vh;    
 }
 @keyframes rotating{
   0%{
-   left: -50%;
+   transform: translate(0px);
   }
   100%{
-    left: 0%;
+    transform: translate(-1200px);
   }
 }
-.move2{
+.moe2{
     animation: rotting1 3s ease-in-out 1s infinite alternate;
     animation: name duration timing-function delay iteration-count direction fill-mode;
        
@@ -66,5 +69,63 @@ body {
   }
   100%{
     margin: 0 50px;
+  }
+}
+
+@media (max-width: 1200px){
+  .Header>ul{
+    width: 40%;
+    gap: 5%;
+  }
+}
+@media (max-width: 1000px){
+  .Header>ul{
+    width: 45%;
+    gap: 4%;
+  }
+}
+@media (max-width: 850px){
+  .Header>ul{
+    width: 50%;
+  }
+}
+@media (max-width: 750px){
+  .Header>ul{
+    width: 55%;
+    gap:3%;
+  }
+}
+@media (max-width: 600px){
+    .Header>ul{
+      display: none;
+  }
+  .Header>h3{
+      font-size: 30px;
+      padding: 0;
+      margin-left: -25px;
+    }
+  .Header{
+    background-color: transparent;
+  }
+  .Header-Bottom{
+    display: flex;
+
+  }
+  .Home1>div{
+    height: 160vh;
+    background: linear-gradient(
+    to bottom right,
+    #0f172a, /* slate-900 */
+    #1e293b, /* slate-800 */
+    #0f172a  /* slate-900 */
+  );
+  margin-bottom: -10px;}
+  .HomeImg{
+    width: 320px;
+    height: 384px;
+  }
+  .SkillsText>p{
+    width: 80%;
+    font-size:small;
   }
 }
